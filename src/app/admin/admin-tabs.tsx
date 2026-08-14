@@ -30,7 +30,7 @@ export function AdminTabs() {
     {
       href: '/admin/sessions',
       label: 'Sessions',
-      authorized: can('listWorkbenchs', { workspace: '*' })
+      authorized: can('listWorkbenches', { workspace: '*' })
     },
     {
       href: '/admin/instances',

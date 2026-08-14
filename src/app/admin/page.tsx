@@ -110,7 +110,7 @@ const AdminPage = () => {
           />
         )}
 
-        {can('listWorkbenchs') && (
+        {can('listWorkbenches') && (
           <StatCard
             href="/admin/sessions"
             title="Sessions"

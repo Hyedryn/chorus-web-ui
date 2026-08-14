@@ -112,7 +112,7 @@ export const AuthorizationProvider = ({
     return (
       can('listWorkspaces', { workspace: '*' }) ||
       can('listUsers', { workspace: '*' }) ||
-      can('listWorkbenchs', { workspace: '*' }) ||
+      can('listWorkbenches', { workspace: '*' }) ||
       can('createApp', {}) ||
       can('setPlatformSettings', {})
     )
