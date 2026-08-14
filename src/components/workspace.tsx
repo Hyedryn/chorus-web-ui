@@ -83,13 +83,9 @@ export function Workspace({ workspaceId }: { workspaceId: string }) {
   const workspaceSessions = useMemo(
     () =>
       workbenches?.filter(
-        (workbench) =>
-          workbench.workspaceId === workspaceId &&
-          user?.rolesWithContext?.some(
-            (role) => role.context.workbench === workbench.id
-          )
+        (workbench) => workbench.workspaceId === workspaceId
       ) ?? [],
-    [workbenches, workspaceId, user?.rolesWithContext]
+    [workbenches, workspaceId]
   )
   const sessionCount = workspaceSessions.length
 

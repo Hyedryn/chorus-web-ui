@@ -24,12 +24,8 @@ export default function SessionPage() {
   // Filter workbenches for this workspace
   const workspaceWorkbenches = useMemo(
     () =>
-      workbenches?.filter((workbench) =>
-        user?.rolesWithContext?.some(
-          (role) => role.context.workbench === workbench.id
-        )
-      ),
-    [workbenches, user?.rolesWithContext]
+      workbenches?.filter((workbench) => workbench.workspaceId === workspaceId),
+    [workbenches, workspaceId]
   )
 
   if (!workspaceId) {

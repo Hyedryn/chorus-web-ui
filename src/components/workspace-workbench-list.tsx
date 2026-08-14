@@ -50,19 +50,12 @@ export function WorkspaceWorkbenchList({
   }, [workspaceId, loadUsers])
 
   const workbenchList = useMemo(() => {
-    const userWorkbenchIds = new Set(
-      user?.rolesWithContext
-        ?.map((role) => role.context.workbench)
-        .filter(Boolean) ?? []
-    )
     return workbenches
-      ?.filter(
-        (workbench) =>
-          userWorkbenchIds.has(workbench.id ?? '') &&
-          (workspaceId ? workbench.workspaceId === workspaceId : true)
+      ?.filter((workbench) =>
+        workspaceId ? workbench.workspaceId === workspaceId : true
       )
       ?.sort((a) => (a.userId === user?.id ? -1 : 1))
-  }, [workbenches, workspaceId, user?.rolesWithContext, user?.id])
+  }, [workbenches, workspaceId, user?.id])
 
   if (workbenchList?.length === 0) {
     return (
