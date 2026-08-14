@@ -1,3 +1,10 @@
+## [1.82.1](https://github.com/CHORUS-TRE/chorus-web-ui/compare/v1.82.0...v1.82.1) (2026-08-14)
+
+
+### Bug Fixes
+
+* **authz:** correct spelling of 'listWorkbenches' in authorization checks ([#257](https://github.com/CHORUS-TRE/chorus-web-ui/issues/257)) ([1fd7fa2](https://github.com/CHORUS-TRE/chorus-web-ui/commit/1fd7fa281082d7e9aa52fec65394596196f20fbd))
+
 # [1.82.0](https://github.com/CHORUS-TRE/chorus-web-ui/compare/v1.81.0...v1.82.0) (2026-08-06)
 
 
